@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de aprovação</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/x-icon" href="img/escolaicon.png">
+
+</head>
+<body>
+    <header>
+        <div class="redes">
+            <a href="https://github.com/IGOLVISCK" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/igor-reis-9313a233b/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <h1 class="tittleHeader">Sistema de aprovação</h1>
+        <a href="mailto:igorsreis2017@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    </header>
+    <main>
+        <section class="sistema">
+            <table>
+                <tr class="line1">
+                    <td><input type="text" placeholder="Nome do aluno" id="inputname"></td>
+                    <td><input type="number" placeholder="Quantidade de falta" id="inputFalta"></td>
+                    <td><input type="number" placeholder="Nota do 1º Bimestre" class="inputNota"></td>
+                    <td><input type="number" placeholder="Nota do 2º Bimestre" class="inputNota"></td>
+                    <td><input type="number" placeholder="Nota do 3º Bimestre" class="inputNota"></td>
+                    <td><input type="number" placeholder="Nota do 4º Bimestre" class="inputNota"></td>
+                    <td><input type="number" placeholder="Máx. Faltas" id="maxFaltas"  title="Adicione um número máximo de faltas permitidas"></td>
+                    <td><input type="number" placeholder="Média Min" id="mediaMin" title="Adicione a média necessária para aprovação"></td>
+                </tr>
+            </table>
+            <div class="botoes">
+                <button onclick="botaoResultado()" class="btnResultado"> VERIFICAR</button>
+                <button onclick="limparAlunos()" class="btnLimpar">LIMPAR ALUNOS</button>
+            </div>
+            <div id="resultado"></div>
+        </section>
+
+    </main>
+
+
+    <script src="https://kit.fontawesome.com/13b945b1e7.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
