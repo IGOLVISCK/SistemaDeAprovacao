@@ -5,17 +5,22 @@ function botaoResultado() {
     
 
     const name = document.getElementById("inputname");
+
+
     const maxFaltas = document.getElementById('maxFaltas');
     const mediaMin = document.getElementById('mediaMin');
     const inputF = document.getElementById('inputFalta');
     const inputN = document.querySelectorAll('.inputNota');
+
     const resultado = document.getElementById('resultado');
     
+
     let soma = 0;
 
     inputN.forEach(input => {  //A função forEach() percorre cada input da lista.
         soma += (Number(input.value)) || 0; //Number(input.value) converte oq esta no input para numero e logo após / por 4
     }); // || 0 é uma proteção: se o valor for vazio ("") ou inválido, ele usa 0 (evita que NaN entre na conta).
+
 
     let media = soma / 4;
 
@@ -88,14 +93,17 @@ function validarMedia() {
 
 
 function limparCampos() {
+
     const inputs = document.querySelectorAll('input');
 
     inputs.forEach(input => {
         input.value = ''
     });
+
 }
 
 function limparAlunos() {
     document.getElementById('resultado').textContent = '...'
     alert('Tem certeza que deseja limpar a lista de alunos?')
+
 }
