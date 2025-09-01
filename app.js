@@ -104,6 +104,4 @@ function limparCampos() {
 
 function limparAlunos() {
     document.getElementById('resultado').textContent = '...'
-    alert('Tem certeza que deseja limpar a lista de alunos?')
-
 }
