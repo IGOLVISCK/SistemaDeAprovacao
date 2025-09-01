@@ -103,5 +103,5 @@ function limparCampos() {
 }
 
 function limparAlunos() {
-    document.getElementById('resultado').textContent = '...'
+    document.getElementById('resultado').textContent = ' '
 }
