@@ -142,14 +142,29 @@ function gerarPDF() {
     
     doc.save("Relatorio_Alunos.pdf");
 }
-
-function limparCampos() {
-    const inputs = document.querySelectorAll('input');
-    inputs.forEach(input => {
-        input.value = ''
-    });
-}
-
 function limparAlunos() {
     document.getElementById('resultado').textContent = ' '
+}
+function limparCampos() {
+
+    // 1. Limpa o nome do aluno
+    const inputName = document.getElementById('inputname');
+    if (inputName) {
+        inputName.value = '';
+    }
+
+    // 2. Limpa a quantidade de faltas do aluno
+    const inputFalta = document.getElementById('inputFalta');
+    if (inputFalta) {
+        inputFalta.value = '';
+    }
+
+    // 3. Limpa as notas de bimestre (que têm a classe 'inputNota')
+    const inputN = document.querySelectorAll('.inputNota');
+    inputN.forEach(input => {
+        input.value = '';
+    });
+    
+    // Os campos 'maxFaltas' e 'mediaMin' não são selecionados nem modificados,
+    // garantindo que seus valores permaneçam no formulário para o próximo aluno.
 }
